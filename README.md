@@ -1,5 +1,21 @@
 # EightFold
 
+The pipeline consists of seven stages:
+
+First, the application detects the type of each input file, such as a recruiter CSV or a resume.
+
+Next, the parser extracts candidate information like name, email, phone number, skills, education, and experience.
+
+The normalization module standardizes values such as phone numbers, skill names, and dates.
+
+The merge module combines information from multiple sources and resolves conflicts using predefined source-priority rules.
+
+After merging, confidence scores are assigned, and provenance information is maintained for every field.
+
+Finally, the output is projected into the required JSON format based on a runtime configuration and validated before being written to the output file.
+
+
+
 How to Run
 Step 1 - Install dependencies
 pip install -r requirements.txt
